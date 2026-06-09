@@ -1,6 +1,6 @@
 {
   "buildCommand": "cd apps/web && pnpm build",
-  "installCommand": "corepack enable && corepack prepare pnpm@10.33.2 --activate && pnpm install",
+  "installCommand": "npm install -g pnpm@10.33.2 && pnpm install",
   "outputDirectory": "apps/web/.next",
   "framework": "nextjs"
 }
