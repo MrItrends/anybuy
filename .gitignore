@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.next
+dist
+.expo
+out
+build
+
+# Turbo cache
+.turbo
+
+# Environment — never commit real secrets
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# IDE
+.vscode/settings.json
+.idea
+
+# CCE (code-context-engine) — local per-machine cache
+.cce/
+
+# Claude Code — local settings and skill cache (not for version control)
+.claude/settings.local.json
+.agents/
+
+# Supabase local dev
+supabase/.temp

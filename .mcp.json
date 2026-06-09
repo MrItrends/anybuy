@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "context-engine": {
+      "command": "c:\\users\\surface\\.local\\bin\\cce.EXE",
+      "args": [
+        "serve",
+        "--project-dir",
+        "C:\\Users\\Surface\\onedrive\\documents\\anybuy"
+      ]
+    }
+  }
+}

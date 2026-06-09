@@ -1,0 +1,15 @@
+# Normalise all text files to LF on commit
+* text=auto eol=lf
+
+# Binary files — never mangle
+*.png  binary
+*.webp binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.pdf  binary
