@@ -62,7 +62,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Keep in sync for the lifetime of this tab
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_OUT' || !session) { setUser(null); return }
-      if (event === 'TOKEN_REFRESH_FAILED') { supabase.auth.signOut(); setUser(null); return }
       if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED' || event === 'USER_UPDATED') {
         syncUser(session)
       }
