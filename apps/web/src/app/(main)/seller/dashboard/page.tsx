@@ -12,7 +12,7 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import toast from 'react-hot-toast'
 import { NotificationBell } from '@/components/seller/NotificationBell'
 import { StockUpdateModal, type StockListing } from '@/components/seller/StockUpdateModal'
@@ -65,6 +65,10 @@ const CONDITION_COLOR: Record<string, string> = {
 
 // ─────────────────────────────────────────────────────────────────────────────
 export default function SellerDashboardPage() {
+  return <Suspense><SellerDashboardContent /></Suspense>
+}
+
+function SellerDashboardContent() {
   const { user, setUser, loading: authLoading } = useAuthStore()
   const router       = useRouter()
   const searchParams = useSearchParams()
